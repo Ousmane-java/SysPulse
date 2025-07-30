@@ -1,0 +1,2 @@
+0 7,13,19 * * * /Users/ousmanedrame/Documents/syspulse/backend/venv/bin/python /Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py >> /Users/ousmanedrame/Documents/syspulse/backend/logs/smart_cron.log 2>&1
+

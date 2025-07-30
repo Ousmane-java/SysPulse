@@ -1,0 +1,1476 @@
+/Library/Developer/CommandLineTools/usr/bin/python3: can't open file '/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py': [Errno 1] Operation not permitted
+/Library/Developer/CommandLineTools/usr/bin/python3: can't open file '/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py': [Errno 1] Operation not permitted
+/Library/Developer/CommandLineTools/usr/bin/python3: can't open file '/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py': [Errno 1] Operation not permitted
+/Library/Developer/CommandLineTools/usr/bin/python3: can't open file '/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py': [Errno 1] Operation not permitted
+/Library/Developer/CommandLineTools/usr/bin/python3: can't open file '/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py': [Errno 1] Operation not permitted
+/Library/Developer/CommandLineTools/usr/bin/python3: can't open file '/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py': [Errno 1] Operation not permitted
+/Library/Developer/CommandLineTools/usr/bin/python3: can't open file '/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py': [Errno 1] Operation not permitted
+/Library/Developer/CommandLineTools/usr/bin/python3: can't open file '/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py': [Errno 1] Operation not permitted
+/Library/Developer/CommandLineTools/usr/bin/python3: can't open file '/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py': [Errno 1] Operation not permitted
+/Library/Developer/CommandLineTools/usr/bin/python3: can't open file '/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py': [Errno 1] Operation not permitted
+/Library/Developer/CommandLineTools/usr/bin/python3: can't open file '/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py': [Errno 1] Operation not permitted
+/Library/Developer/CommandLineTools/usr/bin/python3: can't open file '/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py': [Errno 1] Operation not permitted
+🔍 Scraping GNews API par catégories intelligentes...
+
+📚 Catégorie : Linux
+🔍 Recherche : linux...
+Traceback (most recent call last):
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: articles
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 81, in <module>
+    run_scraper()
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 77, in run_scraper
+    store_articles(articles, category)
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 47, in store_articles
+    if db.query(Article).filter(Article.url == article["url"]).first():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2759, in first
+    return self.limit(1)._iter().first()  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2857, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2251, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1415, in execute
+    return meth(
+           ^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1637, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1842, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1982, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2351, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: articles
+[SQL: SELECT articles.id AS articles_id, articles.title AS articles_title, articles.url AS articles_url, articles.content AS articles_content, articles.summary AS articles_summary, articles.category AS articles_category, articles.image AS articles_image, articles.published_at AS articles_published_at 
+FROM articles 
+WHERE articles.url = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('https://www.frandroid.com/os/gnu-linux/2740475_intel-ferme-clear-linux-os-apres-dix-ans-de-developpement', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+🔍 Scraping GNews API par catégories intelligentes...
+
+📚 Catégorie : Linux
+🔍 Recherche : linux...
+Traceback (most recent call last):
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: articles
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 81, in <module>
+    run_scraper()
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 77, in run_scraper
+    store_articles(articles, category)
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 47, in store_articles
+    if db.query(Article).filter(Article.url == article["url"]).first():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2759, in first
+    return self.limit(1)._iter().first()  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2857, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2251, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1415, in execute
+    return meth(
+           ^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1637, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1842, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1982, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2351, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: articles
+[SQL: SELECT articles.id AS articles_id, articles.title AS articles_title, articles.url AS articles_url, articles.content AS articles_content, articles.summary AS articles_summary, articles.category AS articles_category, articles.image AS articles_image, articles.published_at AS articles_published_at 
+FROM articles 
+WHERE articles.url = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('https://www.frandroid.com/os/gnu-linux/2740475_intel-ferme-clear-linux-os-apres-dix-ans-de-developpement', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+🔍 Scraping GNews API par catégories intelligentes...
+
+📚 Catégorie : Linux
+🔍 Recherche : linux...
+Traceback (most recent call last):
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: articles
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 81, in <module>
+    run_scraper()
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 77, in run_scraper
+    store_articles(articles, category)
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 47, in store_articles
+    if db.query(Article).filter(Article.url == article["url"]).first():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2759, in first
+    return self.limit(1)._iter().first()  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2857, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2251, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1415, in execute
+    return meth(
+           ^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1637, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1842, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1982, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2351, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: articles
+[SQL: SELECT articles.id AS articles_id, articles.title AS articles_title, articles.url AS articles_url, articles.content AS articles_content, articles.summary AS articles_summary, articles.category AS articles_category, articles.image AS articles_image, articles.published_at AS articles_published_at 
+FROM articles 
+WHERE articles.url = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('https://www.frandroid.com/os/gnu-linux/2740475_intel-ferme-clear-linux-os-apres-dix-ans-de-developpement', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+🔍 Scraping GNews API par catégories intelligentes...
+
+📚 Catégorie : Linux
+🔍 Recherche : linux...
+Traceback (most recent call last):
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: articles
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 81, in <module>
+    run_scraper()
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 77, in run_scraper
+    store_articles(articles, category)
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 47, in store_articles
+    if db.query(Article).filter(Article.url == article["url"]).first():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2759, in first
+    return self.limit(1)._iter().first()  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2857, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2251, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1415, in execute
+    return meth(
+           ^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1637, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1842, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1982, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2351, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: articles
+[SQL: SELECT articles.id AS articles_id, articles.title AS articles_title, articles.url AS articles_url, articles.content AS articles_content, articles.summary AS articles_summary, articles.category AS articles_category, articles.image AS articles_image, articles.published_at AS articles_published_at 
+FROM articles 
+WHERE articles.url = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('https://www.frandroid.com/os/gnu-linux/2740475_intel-ferme-clear-linux-os-apres-dix-ans-de-developpement', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+
+📅 Scraper lancé à 2025-07-23 13:00:01
+
+🔍 Scraping GNews API par catégories intelligentes...
+
+📚 Catégorie : Linux
+🔍 Recherche : linux...
+Traceback (most recent call last):
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: articles
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 92, in <module>
+    run_scraper()
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 84, in run_scraper
+    store_articles(articles, category)
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 50, in store_articles
+    if db.query(Article).filter(Article.url == article["url"]).first():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2759, in first
+    return self.limit(1)._iter().first()  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2857, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2251, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1415, in execute
+    return meth(
+           ^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1637, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1842, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1982, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2351, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: articles
+[SQL: SELECT articles.id AS articles_id, articles.title AS articles_title, articles.url AS articles_url, articles.content AS articles_content, articles.summary AS articles_summary, articles.category AS articles_category, articles.image AS articles_image, articles.published_at AS articles_published_at 
+FROM articles 
+WHERE articles.url = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('https://www.frandroid.com/os/gnu-linux/2740475_intel-ferme-clear-linux-os-apres-dix-ans-de-developpement', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+
+📅 Scraper lancé à 2025-07-23 19:00:02
+
+🔍 Scraping GNews API par catégories intelligentes...
+
+📚 Catégorie : Linux
+🔍 Recherche : linux...
+Traceback (most recent call last):
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: articles
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 92, in <module>
+    run_scraper()
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 84, in run_scraper
+    store_articles(articles, category)
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 50, in store_articles
+    if db.query(Article).filter(Article.url == article["url"]).first():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2759, in first
+    return self.limit(1)._iter().first()  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2857, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2251, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1415, in execute
+    return meth(
+           ^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1637, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1842, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1982, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2351, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: articles
+[SQL: SELECT articles.id AS articles_id, articles.title AS articles_title, articles.url AS articles_url, articles.content AS articles_content, articles.summary AS articles_summary, articles.category AS articles_category, articles.image AS articles_image, articles.published_at AS articles_published_at 
+FROM articles 
+WHERE articles.url = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('https://www.frandroid.com/os/gnu-linux/2740475_intel-ferme-clear-linux-os-apres-dix-ans-de-developpement', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+
+📅 Scraper lancé à 2025-07-24 13:00:02
+
+🔍 Scraping GNews API par catégories intelligentes...
+
+📚 Catégorie : Linux
+🔍 Recherche : linux...
+Traceback (most recent call last):
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: articles
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 92, in <module>
+    run_scraper()
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 84, in run_scraper
+    store_articles(articles, category)
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 50, in store_articles
+    if db.query(Article).filter(Article.url == article["url"]).first():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2759, in first
+    return self.limit(1)._iter().first()  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2857, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2251, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1415, in execute
+    return meth(
+           ^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1637, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1842, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1982, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2351, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: articles
+[SQL: SELECT articles.id AS articles_id, articles.title AS articles_title, articles.url AS articles_url, articles.content AS articles_content, articles.summary AS articles_summary, articles.category AS articles_category, articles.image AS articles_image, articles.published_at AS articles_published_at 
+FROM articles 
+WHERE articles.url = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('https://www.frandroid.com/os/gnu-linux/2740475_intel-ferme-clear-linux-os-apres-dix-ans-de-developpement', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+
+📅 Scraper lancé à 2025-07-24 19:00:02
+
+🔍 Scraping GNews API par catégories intelligentes...
+
+📚 Catégorie : Linux
+🔍 Recherche : linux...
+Traceback (most recent call last):
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: articles
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 92, in <module>
+    run_scraper()
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 84, in run_scraper
+    store_articles(articles, category)
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 50, in store_articles
+    if db.query(Article).filter(Article.url == article["url"]).first():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2759, in first
+    return self.limit(1)._iter().first()  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2857, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2251, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1415, in execute
+    return meth(
+           ^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1637, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1842, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1982, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2351, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: articles
+[SQL: SELECT articles.id AS articles_id, articles.title AS articles_title, articles.url AS articles_url, articles.content AS articles_content, articles.summary AS articles_summary, articles.category AS articles_category, articles.image AS articles_image, articles.published_at AS articles_published_at 
+FROM articles 
+WHERE articles.url = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('https://www.frandroid.com/os/gnu-linux/2740475_intel-ferme-clear-linux-os-apres-dix-ans-de-developpement', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+
+📅 Scraper lancé à 2025-07-25 07:00:04
+
+🔍 Scraping GNews API par catégories intelligentes...
+
+📚 Catégorie : Linux
+🔍 Recherche : linux...
+Traceback (most recent call last):
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/socket.py", line 976, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/urllib3/connection.py", line 753, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/urllib3/connection.py", line 205, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x1126f35f0>: Failed to resolve 'gnews.io' ([Errno 8] nodename nor servname provided, or not known)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='gnews.io', port=443): Max retries exceeded with url: /api/v4/search?q=linux&lang=fr&max=10&apikey=5d4c1fae0d71f0055fb5e698f5047250 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x1126f35f0>: Failed to resolve 'gnews.io' ([Errno 8] nodename nor servname provided, or not known)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 92, in <module>
+    run_scraper()
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 83, in run_scraper
+    articles = fetch_articles(keyword)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 38, in fetch_articles
+    response = requests.get(BASE_URL, params=params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/requests/adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='gnews.io', port=443): Max retries exceeded with url: /api/v4/search?q=linux&lang=fr&max=10&apikey=5d4c1fae0d71f0055fb5e698f5047250 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x1126f35f0>: Failed to resolve 'gnews.io' ([Errno 8] nodename nor servname provided, or not known)"))
+
+📅 Scraper lancé à 2025-07-25 13:00:01
+
+🔍 Scraping GNews API par catégories intelligentes...
+
+📚 Catégorie : Linux
+🔍 Recherche : linux...
+Traceback (most recent call last):
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: articles
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 92, in <module>
+    run_scraper()
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 84, in run_scraper
+    store_articles(articles, category)
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 50, in store_articles
+    if db.query(Article).filter(Article.url == article["url"]).first():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2759, in first
+    return self.limit(1)._iter().first()  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2857, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2251, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1415, in execute
+    return meth(
+           ^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1637, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1842, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1982, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2351, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: articles
+[SQL: SELECT articles.id AS articles_id, articles.title AS articles_title, articles.url AS articles_url, articles.content AS articles_content, articles.summary AS articles_summary, articles.category AS articles_category, articles.image AS articles_image, articles.published_at AS articles_published_at 
+FROM articles 
+WHERE articles.url = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('https://www.frandroid.com/os/gnu-linux/2740475_intel-ferme-clear-linux-os-apres-dix-ans-de-developpement', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+
+📅 Scraper lancé à 2025-07-25 19:00:06
+
+🔍 Scraping GNews API par catégories intelligentes...
+
+📚 Catégorie : Linux
+🔍 Recherche : linux...
+Traceback (most recent call last):
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: articles
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 92, in <module>
+    run_scraper()
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 84, in run_scraper
+    store_articles(articles, category)
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 50, in store_articles
+    if db.query(Article).filter(Article.url == article["url"]).first():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2759, in first
+    return self.limit(1)._iter().first()  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2857, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2251, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1415, in execute
+    return meth(
+           ^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1637, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1842, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1982, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2351, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: articles
+[SQL: SELECT articles.id AS articles_id, articles.title AS articles_title, articles.url AS articles_url, articles.content AS articles_content, articles.summary AS articles_summary, articles.category AS articles_category, articles.image AS articles_image, articles.published_at AS articles_published_at 
+FROM articles 
+WHERE articles.url = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('https://www.igen.fr/android/2025/07/le-terminal-dandroid-va-pouvoir-lancer-des-applications-graphiques-comme-doom-151273', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+
+📅 Scraper lancé à 2025-07-26 13:00:02
+
+🔍 Scraping GNews API par catégories intelligentes...
+
+📚 Catégorie : Linux
+🔍 Recherche : linux...
+Traceback (most recent call last):
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: articles
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 92, in <module>
+    run_scraper()
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 84, in run_scraper
+    store_articles(articles, category)
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 50, in store_articles
+    if db.query(Article).filter(Article.url == article["url"]).first():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2759, in first
+    return self.limit(1)._iter().first()  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2857, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2251, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1415, in execute
+    return meth(
+           ^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1637, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1842, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1982, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2351, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: articles
+[SQL: SELECT articles.id AS articles_id, articles.title AS articles_title, articles.url AS articles_url, articles.content AS articles_content, articles.summary AS articles_summary, articles.category AS articles_category, articles.image AS articles_image, articles.published_at AS articles_published_at 
+FROM articles 
+WHERE articles.url = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('https://www.igen.fr/android/2025/07/le-terminal-dandroid-va-pouvoir-lancer-des-applications-graphiques-comme-doom-151273', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+
+📅 Scraper lancé à 2025-07-26 19:00:31
+
+🔍 Scraping GNews API par catégories intelligentes...
+
+📚 Catégorie : Linux
+🔍 Recherche : linux...
+Traceback (most recent call last):
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: articles
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 92, in <module>
+    run_scraper()
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 84, in run_scraper
+    store_articles(articles, category)
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 50, in store_articles
+    if db.query(Article).filter(Article.url == article["url"]).first():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2759, in first
+    return self.limit(1)._iter().first()  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2857, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2251, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1415, in execute
+    return meth(
+           ^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1637, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1842, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1982, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2351, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: articles
+[SQL: SELECT articles.id AS articles_id, articles.title AS articles_title, articles.url AS articles_url, articles.content AS articles_content, articles.summary AS articles_summary, articles.category AS articles_category, articles.image AS articles_image, articles.published_at AS articles_published_at 
+FROM articles 
+WHERE articles.url = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('https://www.igen.fr/android/2025/07/le-terminal-dandroid-va-pouvoir-lancer-des-applications-graphiques-comme-doom-151273', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+
+📅 Scraper lancé à 2025-07-27 07:00:01
+
+🔍 Scraping GNews API par catégories intelligentes...
+
+📚 Catégorie : Linux
+🔍 Recherche : linux...
+Traceback (most recent call last):
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: articles
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 92, in <module>
+    run_scraper()
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 84, in run_scraper
+    store_articles(articles, category)
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 50, in store_articles
+    if db.query(Article).filter(Article.url == article["url"]).first():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2759, in first
+    return self.limit(1)._iter().first()  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2857, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2251, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1415, in execute
+    return meth(
+           ^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1637, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1842, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1982, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2351, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: articles
+[SQL: SELECT articles.id AS articles_id, articles.title AS articles_title, articles.url AS articles_url, articles.content AS articles_content, articles.summary AS articles_summary, articles.category AS articles_category, articles.image AS articles_image, articles.published_at AS articles_published_at 
+FROM articles 
+WHERE articles.url = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('https://www.igen.fr/android/2025/07/le-terminal-dandroid-va-pouvoir-lancer-des-applications-graphiques-comme-doom-151273', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+
+📅 Scraper lancé à 2025-07-27 19:00:40
+
+🔍 Scraping GNews API par catégories intelligentes...
+
+📚 Catégorie : Linux
+🔍 Recherche : linux...
+Traceback (most recent call last):
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/socket.py", line 976, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/urllib3/connection.py", line 753, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/urllib3/connection.py", line 205, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x10a462cc0>: Failed to resolve 'gnews.io' ([Errno 8] nodename nor servname provided, or not known)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='gnews.io', port=443): Max retries exceeded with url: /api/v4/search?q=linux&lang=fr&max=10&apikey=5d4c1fae0d71f0055fb5e698f5047250 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10a462cc0>: Failed to resolve 'gnews.io' ([Errno 8] nodename nor servname provided, or not known)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 92, in <module>
+    run_scraper()
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 83, in run_scraper
+    articles = fetch_articles(keyword)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 38, in fetch_articles
+    response = requests.get(BASE_URL, params=params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/requests/adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='gnews.io', port=443): Max retries exceeded with url: /api/v4/search?q=linux&lang=fr&max=10&apikey=5d4c1fae0d71f0055fb5e698f5047250 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10a462cc0>: Failed to resolve 'gnews.io' ([Errno 8] nodename nor servname provided, or not known)"))
+
+📅 Scraper lancé à 2025-07-28 07:00:02
+
+🔍 Scraping GNews API par catégories intelligentes...
+
+📚 Catégorie : Linux
+🔍 Recherche : linux...
+Traceback (most recent call last):
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: articles
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 92, in <module>
+    run_scraper()
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 84, in run_scraper
+    store_articles(articles, category)
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 50, in store_articles
+    if db.query(Article).filter(Article.url == article["url"]).first():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2759, in first
+    return self.limit(1)._iter().first()  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2857, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2251, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1415, in execute
+    return meth(
+           ^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1637, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1842, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1982, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2351, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: articles
+[SQL: SELECT articles.id AS articles_id, articles.title AS articles_title, articles.url AS articles_url, articles.content AS articles_content, articles.summary AS articles_summary, articles.category AS articles_category, articles.image AS articles_image, articles.published_at AS articles_published_at 
+FROM articles 
+WHERE articles.url = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('https://www.igen.fr/android/2025/07/le-terminal-dandroid-va-pouvoir-lancer-des-applications-graphiques-comme-doom-151273', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+
+📅 Scraper lancé à 2025-07-28 13:00:01
+
+🔍 Scraping GNews API par catégories intelligentes...
+
+📚 Catégorie : Linux
+🔍 Recherche : linux...
+Traceback (most recent call last):
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: articles
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 92, in <module>
+    run_scraper()
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 84, in run_scraper
+    store_articles(articles, category)
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 50, in store_articles
+    if db.query(Article).filter(Article.url == article["url"]).first():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2759, in first
+    return self.limit(1)._iter().first()  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2857, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2251, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1415, in execute
+    return meth(
+           ^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1637, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1842, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1982, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2351, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: articles
+[SQL: SELECT articles.id AS articles_id, articles.title AS articles_title, articles.url AS articles_url, articles.content AS articles_content, articles.summary AS articles_summary, articles.category AS articles_category, articles.image AS articles_image, articles.published_at AS articles_published_at 
+FROM articles 
+WHERE articles.url = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('https://www.igen.fr/android/2025/07/le-terminal-dandroid-va-pouvoir-lancer-des-applications-graphiques-comme-doom-151273', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+
+📅 Scraper lancé à 2025-07-28 19:00:01
+
+🔍 Scraping GNews API par catégories intelligentes...
+
+📚 Catégorie : Linux
+🔍 Recherche : linux...
+Traceback (most recent call last):
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: articles
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 92, in <module>
+    run_scraper()
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 84, in run_scraper
+    store_articles(articles, category)
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 50, in store_articles
+    if db.query(Article).filter(Article.url == article["url"]).first():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2759, in first
+    return self.limit(1)._iter().first()  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2857, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2251, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1415, in execute
+    return meth(
+           ^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1637, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1842, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1982, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2351, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: articles
+[SQL: SELECT articles.id AS articles_id, articles.title AS articles_title, articles.url AS articles_url, articles.content AS articles_content, articles.summary AS articles_summary, articles.category AS articles_category, articles.image AS articles_image, articles.published_at AS articles_published_at 
+FROM articles 
+WHERE articles.url = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('https://www.igen.fr/android/2025/07/le-terminal-dandroid-va-pouvoir-lancer-des-applications-graphiques-comme-doom-151273', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+
+📅 Scraper lancé à 2025-07-29 13:00:02
+
+🔍 Scraping GNews API par catégories intelligentes...
+
+📚 Catégorie : Linux
+🔍 Recherche : linux...
+Traceback (most recent call last):
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: articles
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 92, in <module>
+    run_scraper()
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 84, in run_scraper
+    store_articles(articles, category)
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 50, in store_articles
+    if db.query(Article).filter(Article.url == article["url"]).first():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2759, in first
+    return self.limit(1)._iter().first()  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2857, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2251, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1415, in execute
+    return meth(
+           ^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1637, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1842, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1982, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2351, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: articles
+[SQL: SELECT articles.id AS articles_id, articles.title AS articles_title, articles.url AS articles_url, articles.content AS articles_content, articles.summary AS articles_summary, articles.category AS articles_category, articles.image AS articles_image, articles.published_at AS articles_published_at 
+FROM articles 
+WHERE articles.url = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('https://www.igen.fr/android/2025/07/le-terminal-dandroid-va-pouvoir-lancer-des-applications-graphiques-comme-doom-151273', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+
+📅 Scraper lancé à 2025-07-29 19:00:01
+
+🔍 Scraping GNews API par catégories intelligentes...
+
+📚 Catégorie : Linux
+🔍 Recherche : linux...
+Traceback (most recent call last):
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: articles
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 92, in <module>
+    run_scraper()
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 84, in run_scraper
+    store_articles(articles, category)
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 50, in store_articles
+    if db.query(Article).filter(Article.url == article["url"]).first():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2759, in first
+    return self.limit(1)._iter().first()  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2857, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2251, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1415, in execute
+    return meth(
+           ^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1637, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1842, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1982, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2351, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: articles
+[SQL: SELECT articles.id AS articles_id, articles.title AS articles_title, articles.url AS articles_url, articles.content AS articles_content, articles.summary AS articles_summary, articles.category AS articles_category, articles.image AS articles_image, articles.published_at AS articles_published_at 
+FROM articles 
+WHERE articles.url = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('https://www.frandroid.com/marques/microsoft/2747775_et-si-la-solution-a-la-fin-de-windows-10-etait-de-passer-sur-linux', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+
+📅 Scraper lancé à 2025-07-30 07:00:02
+
+🔍 Scraping GNews API par catégories intelligentes...
+
+📚 Catégorie : Linux
+🔍 Recherche : linux...
+Traceback (most recent call last):
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: articles
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 92, in <module>
+    run_scraper()
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 84, in run_scraper
+    store_articles(articles, category)
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 50, in store_articles
+    if db.query(Article).filter(Article.url == article["url"]).first():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2759, in first
+    return self.limit(1)._iter().first()  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2857, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2251, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1415, in execute
+    return meth(
+           ^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1637, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1842, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1982, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2351, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: articles
+[SQL: SELECT articles.id AS articles_id, articles.title AS articles_title, articles.url AS articles_url, articles.content AS articles_content, articles.summary AS articles_summary, articles.category AS articles_category, articles.image AS articles_image, articles.published_at AS articles_published_at 
+FROM articles 
+WHERE articles.url = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('https://www.frandroid.com/marques/microsoft/2747775_et-si-la-solution-a-la-fin-de-windows-10-etait-de-passer-sur-linux', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+
+📅 Scraper lancé à 2025-07-30 13:00:01
+
+🔍 Scraping GNews API par catégories intelligentes...
+
+📚 Catégorie : Linux
+🔍 Recherche : linux...
+Traceback (most recent call last):
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: articles
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 92, in <module>
+    run_scraper()
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 84, in run_scraper
+    store_articles(articles, category)
+  File "/Users/ousmanedrame/Documents/syspulse/backend/smart_scraper.py", line 50, in store_articles
+    if db.query(Article).filter(Article.url == article["url"]).first():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2759, in first
+    return self.limit(1)._iter().first()  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2857, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2251, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/orm/context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1415, in execute
+    return meth(
+           ^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1637, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1842, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1982, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2351, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1963, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/ousmanedrame/Documents/syspulse/backend/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 943, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: articles
+[SQL: SELECT articles.id AS articles_id, articles.title AS articles_title, articles.url AS articles_url, articles.content AS articles_content, articles.summary AS articles_summary, articles.category AS articles_category, articles.image AS articles_image, articles.published_at AS articles_published_at 
+FROM articles 
+WHERE articles.url = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('https://www.presse-citron.net/android-linux-google-revele-enfin-lobjectif-de-cette-mysterieuse-fonctionnalite/', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
