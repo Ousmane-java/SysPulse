@@ -38,6 +38,15 @@ Elle collecte, résume et classe automatiquement les meilleurs articles récents
 
 1. **Cloner le dépôt GitHub** :
 
+Ce projet est open-source. Vous pouvez librement le cloner, l’adapter à vos besoins et l’utiliser pour votre propre veille technologique.
+
+📦 Pré-requis
+Git
+Node.js (>= 18.x)
+Python (>= 3.10)
+Poetry ou venv pour gérer l’environnement Python
+Une clé OpenAI (pour le résumé automatique)
+
 ```bash
 git clone https://github.com/Ousmane-java/syspulse.git
 cd syspulse
